@@ -1,0 +1,17 @@
+[Desktop Entry]
+Actions=compress-here;
+MimeType=all/all;
+ServiceTypes=KonqPopupMenu/Plugin
+Type=Service
+X-KDE-Priority=TopLevel
+
+[Desktop Action compress-here]
+# Exec=ark --add-to $(basename %F).zip --dialog %F
+# Exec=s=%N;ark --add-to $(echo "${s%.*}.zip") --dialog %F
+# Exec=s=%N | ark --add-to $s.zip %F
+# Exec=ark --add-to "test.zip" %F
+Exec=s="%N"; s="$(basename $s)"; s="$(echo "${s%.*}")"; ark --add-to "$s" --autosubfolder --dialog %F
+# Exec=s=%N; zip -r $(echo "${s%.*}") %F
+# Exec=s=%N; zip $(echo $s) %F
+Icon=archive-compress
+Name=Compress here

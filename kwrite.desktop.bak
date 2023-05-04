@@ -1,0 +1,11 @@
+[Desktop Entry]
+Actions=open;
+MimeType=all/allfiles;
+ServiceTypes=KonqPopupMenu/Plugin
+Type=Service
+X-KDE-Priority=TopLevel
+
+[Desktop Action open]
+Exec=kwrite %U
+Icon=kwrite
+Name=Open in kwrite

@@ -1,0 +1,12 @@
+[Desktop Entry]
+Actions=complete;simple;complete-txt;
+MimeType=video/*;audio/*;image/*;
+ServiceTypes=KonqPopupMenu/Plugin
+Type=Service
+X-KDE-Priority=TopLevel
+
+[Desktop Action complete]
+Exec=kdialog --msgbox "$(mediainfo --Output=HTML %f)" --title "%n"
+# Exec=kdialog --msgbox "$(mediainfo --Output=HTML %u)" --title "%n"
+Icon=dialog-information
+Name=Media Info

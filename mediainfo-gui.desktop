@@ -1,0 +1,11 @@
+[Desktop Entry]
+# Actions=open;
+MimeType=video/*;audio/*;image/*;
+ServiceTypes=KonqPopupMenu/Plugin
+Type=Service
+X-KDE-Priority=TopLevel
+
+[Desktop Action open]
+Exec=mediainfo-gui %f
+Icon=dialog-information
+Name=Media Info (GUI)

@@ -1,0 +1,14 @@
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=all/all;inode/directory;
+Actions=rename;
+X-KDE-StartupNotify=false
+X-KDE-Priority=TopLevel
+# X-KDE-MinNumberOfUrls=2
+Icon=cm_multirename
+
+[Desktop Action rename]
+Name=Batch Rename
+Exec=gprename %F
+Icon=cm_multirename

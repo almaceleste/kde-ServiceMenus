@@ -1,0 +1,11 @@
+[Desktop Entry]
+Actions=open;
+MimeType=image/*;
+ServiceTypes=KonqPopupMenu/Plugin
+Type=Service
+X-KDE-Priority=TopLevel
+
+[Desktop Action open]
+Exec=export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel -Dswing.crossplatformlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel'; /usr/bin/jexiftoolgui %F
+Icon=/usr/share/jexiftoolgui/jexiftoolgui-48x48.png
+Name=Open in jExifTool

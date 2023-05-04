@@ -1,0 +1,11 @@
+[Desktop Entry]
+Actions=open;
+MimeType=audio/*;video/*;inode/directory;
+ServiceTypes=KonqPopupMenu/Plugin
+Type=Service
+X-KDE-Priority=TopLevel
+
+[Desktop Action open]
+Exec=smplayer %F
+Icon=smplayer
+Name=Play with smplayer

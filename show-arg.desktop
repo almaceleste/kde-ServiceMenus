@@ -1,0 +1,67 @@
+[Desktop Entry]
+Actions=show;
+MimeType=all/all;
+Name=Show arg
+ServiceTypes=KonqPopupMenu/Plugin
+Type=Service
+X-KDE-Priority=TopLevel
+
+[Desktop Action show]
+Exec=s="%N"; s="$(basename $s)"; s="$(echo "${s%.*}")"; ~/repo/scripts/show-arg.sh "$s"
+Icon=tool_review
+Name=Show arg
+
+# https://askubuntu.com/a/783313/463242
+
+# %f - A single file name, even if multiple files are selected. If an application cannot handle multiple file arguments, the system must recognize this, and if it does, it will probably need to create and execute multiple copies of the application for each selected file. If files are not on the local file system (i.e. are on HTTP or FTP locations), the files will be copied to the local file system and %f will be expanded to point at the temporary file. Used for programs that do not understand the URL syntax.
+# %F - A list of files. Use for apps that can open several local files at once. Each file is passed as a separate argument to the executable program.
+# %u - A single URL. Local files may either be passed as file: URLs or as file path.
+# %U - A list of URLs. Each URL is passed as a separate argument to the executable program. Local files may either be passed as file: URLs or as file path.
+# %i - The Icon key of the desktop entry expanded as two arguments, first --icon and then the value of the Icon key. Should not expand to any arguments if the Icon key is empty or missing.
+# %c - The translated name of the application as listed in the appropriate Name key in the desktop entry. If the Name key is missing, the .desktop filename without extension will probably be used.
+# %k - The location of the desktop file as either a URI (if for example gotten from the vfolder system) or a local filename or empty if no location is known.
+
+# Deprecated ones:
+# %d
+# %D
+# %n
+# %N
+# %v
+# %m
+
+# Nautilus Actions extends these to include a few more items, and I think most file managers follow that as a convention. Aside from those listed above, it adds:
+# %b (first) basename
+# %B space-separated list of basenames
+# %c count of selected items
+# %d (first) base directory
+# %D space-separated list of base directory of each selected items
+# %h hostname of the (first) URI
+# %m mimetype of the (first) selected item
+# %M space-separated list of the mimetypes of the selected items
+# %n username of the (first) URI
+# %o no-op operator which forces a form of execution when specified as first parameter, ignored else
+# %O no-op operator which forces a form of execution when specified as first parameter, ignored else
+# %p port number of the (first) URI
+# %s scheme of the (first) URI
+# %w (first) basename without the extension
+# %W space-separated list of basenames without their extension
+# %x (first) extension
+# %X space-separated list of extensions
+# %% the « % » character
+
+# Thunar Actions supports even fewer - the ones it supports are listed in the dialog for adding actions:
+# %f The path to the first selected file
+# %F The paths to all the selected files
+# %d Directory containing the file referred to by %f
+# %D Directories containing the files referred to by %F
+# %n The first selected filename, without the path
+# %N All the selected filenames, without paths
+
+# Dolphin supports the following parameters in addition to the main list:
+# %d base directories of the selected files as separated arguments. behavior as in %f
+# %D base directories of the selected files as a single space-separated argument
+# %n basename of the selected files as separated arguments. behavior as in %f
+# %N basenames of the selected files as a single space-separated argument
+# %m similar to %f
+# If an unsupported parameter is used, Dolphin sends it simply as a string (for example, "%M") and appends file paths to it, as in %f.
+# If neither option is used, Dolphin still sends file paths, as in %f.

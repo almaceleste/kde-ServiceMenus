@@ -1,0 +1,11 @@
+[Desktop Entry]
+Actions=copy;
+MimeType=all/all;
+ServiceTypes=KonqPopupMenu/Plugin
+Type=Service
+X-KDE-Priority=TopLevel
+
+[Desktop Action copy]
+Exec=~/repo/scripts/copy-to-tmp.sh %u
+Icon=editcopy
+Name=Copy to /tmp

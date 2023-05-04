@@ -1,0 +1,11 @@
+[Desktop Entry]
+Actions=analyze;
+MimeType=inode/directory;
+ServiceTypes=KonqPopupMenu/Plugin
+Type=Service
+X-KDE-Priority=TopLevel
+
+[Desktop Action analyze]
+Exec=filelight %u
+Icon=baobab
+Name=Analyze disk usage

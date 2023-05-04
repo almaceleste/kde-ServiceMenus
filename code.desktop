@@ -1,0 +1,11 @@
+[Desktop Entry]
+Actions=open;
+MimeType=all/all;
+ServiceTypes=KonqPopupMenu/Plugin
+Type=Service
+X-KDE-Priority=TopLevel
+
+[Desktop Action open]
+Exec=/usr/share/code/code --new-window %U
+Icon=com.visualstudio.code
+Name=Open in code

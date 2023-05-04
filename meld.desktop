@@ -1,0 +1,11 @@
+[Desktop Entry]
+Actions=open;
+MimeType=all/all;
+ServiceTypes=KonqPopupMenu/Plugin
+Type=Service
+X-KDE-Priority=TopLevel
+
+[Desktop Action open]
+Exec=/usr/bin/meld %U
+Icon=meld
+Name=Open in meld
